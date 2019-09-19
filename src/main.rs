@@ -45,12 +45,11 @@ fn graphql(
 }
 
 fn graphiql() -> HttpResponse {
-    let url = get_base_url().to_owned() + "/graphql";
-    let html = graphiql_source(url.as_str());
-    HttpResponse::Ok()
-        .content_type("text/html; charset=utf-8")
-        .body(html)
-}
+        let html = graphiql_source("http://localhost:3003/graphql");
+        HttpResponse::Ok()
+            .content_type("text/html; charset=utf-8")
+            .body(html)
+    }
 
 fn get_env_string<'a>(key: &'a str, default: &'a str) -> String {
     env::var(key).unwrap_or_else(|_error| default.to_owned())
