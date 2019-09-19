@@ -37,21 +37,42 @@ pub struct QueryRoot;
 impl QueryRoot {
     fn fruits() -> Vec<Fruit> {
         vec![
-        Fruit {
-            id: 1,
-            name: "Apple".to_owned(),
-            description: "An apple a day keeps the doctor away!".to_owned(),
-            video_url: "https://www.youtube.com/watch?v=HD4o26HcHi0".to_owned(),
-            video_thumb: "https://i.ytimg.com/an_webp/HD4o26HcHi0/mqdefault_6s.webp?du=3000&sqp=CNjvjOwF&rs=AOn4CLDXXfFl6DmdDeeYW8keteLo4-sV_A".to_owned(),
-        },
-        Fruit {
-            id: 2,
-            name: "Orange".to_owned(),
-            description: "Orange in swedisih literally means chinese apple!".to_owned(),
-            video_url: "https://www.youtube.com/watch?v=ZN5PoW7_kdA".to_owned(),
-            video_thumb: "https://i.ytimg.com/an_webp/ZN5PoW7_kdA/mqdefault_6s.webp?du=3000&sqp=CICLjewF&rs=AOn4CLD6fMuupHGmNwKcCvbfQOKR0hYwuA".to_owned(),
-        },
+            Fruit {
+                id: 1,
+                name: "Apple".to_owned(),
+                description: "An apple a day keeps the doctor away!".to_owned(),
+                video_url: "https://www.youtube.com/watch?v=HD4o26HcHi0".to_owned(),
+                video_thumb: "https://i.ytimg.com/an_webp/HD4o26HcHi0/mqdefault_6s.webp?du=3000&sqp=CNjvjOwF&rs=AOn4CLDXXfFl6DmdDeeYW8keteLo4-sV_A".to_owned(),
+            },
+            Fruit {
+                id: 2,
+                name: "Orange".to_owned(),
+                description: "Orange in swedisih literally means chinese apple!".to_owned(),
+                video_url: "https://www.youtube.com/watch?v=ZN5PoW7_kdA".to_owned(),
+                video_thumb: "https://i.ytimg.com/an_webp/ZN5PoW7_kdA/mqdefault_6s.webp?du=3000&sqp=CICLjewF&rs=AOn4CLD6fMuupHGmNwKcCvbfQOKR0hYwuA".to_owned(),
+            },
         ]
+    }
+
+    fn fruit(id: i32) -> Fruit {
+        let fruits = vec![
+            Fruit {
+                id: 1,
+                name: "Apple".to_owned(),
+                description: "An apple a day keeps the doctor away!".to_owned(),
+                video_url: "https://www.youtube.com/watch?v=HD4o26HcHi0".to_owned(),
+                video_thumb: "https://i.ytimg.com/an_webp/HD4o26HcHi0/mqdefault_6s.webp?du=3000&sqp=CNjvjOwF&rs=AOn4CLDXXfFl6DmdDeeYW8keteLo4-sV_A".to_owned(),
+            },
+            Fruit {
+                id: 2,
+                name: "Orange".to_owned(),
+                description: "Orange in swedisih literally means chinese apple!".to_owned(),
+                video_url: "https://www.youtube.com/watch?v=ZN5PoW7_kdA".to_owned(),
+                video_thumb: "https://i.ytimg.com/an_webp/ZN5PoW7_kdA/mqdefault_6s.webp?du=3000&sqp=CICLjewF&rs=AOn4CLD6fMuupHGmNwKcCvbfQOKR0hYwuA".to_owned(),
+            },
+        ];
+        let fruit = fruits.into_iter().find(|fruit| fruit.id == id);
+        return fruit.unwrap();
     }
 }
 
