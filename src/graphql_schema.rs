@@ -128,7 +128,7 @@ fn all_fruits_of_the_day() -> Vec<FruitOfTheDay> {
     vec![FruitOfTheDay {
         id: 1,
         user_id: 2,
-        time_stamp: "jajaja".to_owned(),
+        time_stamp: "2019-09-19 22:00".to_owned(),
         fruit_id: 2,
     }]
 }
