@@ -4,6 +4,6 @@ services:
     build: .
     environment:
       PORT: 3003
-      HOST: localhost
+      HOST: "0.0.0.0"
     ports:
       - 3003:3003
