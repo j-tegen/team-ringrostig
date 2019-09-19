@@ -1,0 +1,7 @@
+version: "3.7"
+services:
+  team-ringrostig:
+    build: .
+    environment:
+      PORT: 3003
+      HOST: localhost
