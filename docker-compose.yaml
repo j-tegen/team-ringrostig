@@ -5,3 +5,5 @@ services:
     environment:
       PORT: 3003
       HOST: localhost
+    ports:
+      - 3003:3003
